@@ -16,6 +16,7 @@ namespace Infrastructure.Data.Configuration
             //TODO: llave compuesta
             builder.HasKey(t => new { t.IdInsumo, t.IdPrenda });
             builder.HasKey(t => new { t.IdPrenda, t.IdInsumo });
+            builder.Ignore(t => t.Id);
 
             builder.HasOne(I => I.Insumo)
             .WithMany(P => P.InsumoPrendas)
