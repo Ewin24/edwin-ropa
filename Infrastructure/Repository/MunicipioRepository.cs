@@ -8,10 +8,10 @@ using Infrastructure.Data;
 
 namespace Infrastructure.Repository
 {
-    public class PrendaRepository : GenericRepository<Prenda>, IPrendaRepository
+    public class MunicipioRepository : GenericRepository<Municipio>, IMunicipioRepository
     {
         private readonly RopaContext _context;
-        public PrendaRepository(RopaContext context) : base(context)
+        public MunicipioRepository(RopaContext context) : base(context)
         {
             _context = context;
         }
