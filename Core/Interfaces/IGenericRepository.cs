@@ -14,7 +14,7 @@ namespace Core.Interfaces
         void Add(T entity);
         void AddRange(IEnumerable<T> entities);
         void RemoveRange(IEnumerable<T> entity);
-        void Remove(T entity);
+        void Delete(T entity);
         void Update(T entity);
     }
 }
