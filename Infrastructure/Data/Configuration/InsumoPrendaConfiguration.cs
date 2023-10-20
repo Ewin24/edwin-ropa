@@ -14,7 +14,16 @@ namespace Infrastructure.Data.Configuration
         {
             builder.ToTable("InsumoPrenda");
             //TODO: llave compuesta
-            builder.HasKey(t => new { t.IdInsumo, t.Id });
+            builder.HasKey(t => new { t.IdInsumo, t.IdPrenda });
+            builder.HasKey(t => new { t.IdPrenda, t.IdInsumo });
+
+            builder.HasOne(I => I.Insumo)
+            .WithMany(P => P.InsumoPrendas)
+            .HasForeignKey(I => I.IdInsumo);
+
+            builder.HasOne(I => I.Prenda)
+            .WithMany(P => P.InsumoPrendas)
+            .HasForeignKey(I => I.IdPrenda);
         }
     }
 }

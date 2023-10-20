@@ -33,3 +33,8 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+// dotnet ef migrations add InitialCreate --project ./Infraestructura/ --startup-project ./API/ --output-dir ./Data/Migrations  // migracion Base de datos 
+// dotnet ef database update --project ./Infraestructura/ --startup-project ./API/ // Actualizar Base de datos 
+// dotnet run  --project API/ //Comando Para correr el proyecto
+// dotnet tool install --global dotnet-ef

@@ -40,7 +40,6 @@ public class RopaContext : DbContext
     DbSet<Talla> Tallas { get; set; }
     DbSet<TipoEstado> TipoEstados { get; set; }
     DbSet<TipoPersona> TipoPersonas { get; set; }
-    DbSet<TipoProduccion> TipoProducciones { get; set; }
     DbSet<TipoProteccion> TipoProtecciones { get; set; }
     DbSet<Venta> Ventas { get; set; }
 

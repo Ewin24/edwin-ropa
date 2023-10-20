@@ -13,12 +13,16 @@ namespace Infrastructure.Data.Configuration
         public void Configure(EntityTypeBuilder<InsumoProveedor> builder)
         {
             builder.ToTable("InsumoProveedor");
-            builder.HasKey(t => new { t.Id, t.IdInsumo });
-            builder.HasKey(t => new { t.Id, t.IdProveedor });
+            builder.HasKey(t => new { t.IdProveedor, t.IdInsumo });
+            builder.HasKey(t => new { t.IdInsumo, t.IdProveedor });
 
             builder.HasOne(I => I.Proveedor)
             .WithMany(P => P.InsumoProveedores)
             .HasForeignKey(I => I.IdProveedor);
+
+            builder.HasOne(I => I.Insumo)
+            .WithMany(P => P.InsumoProveedores)
+            .HasForeignKey(I => I.IdInsumo);
         }
     }
 }

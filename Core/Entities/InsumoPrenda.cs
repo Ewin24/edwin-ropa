@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class InsumoPrenda : BaseEntity
+    public class InsumoPrenda
     {
         public int cantidad;
         public int IdInsumo;

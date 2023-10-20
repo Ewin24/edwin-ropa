@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Data.Configuration
 {
-    public class TipoProteccionConfiguration : IEntityTypeConfiguration<TipoProduccion>
+    public class TipoProteccionConfiguration : IEntityTypeConfiguration<TipoProteccion>
     {
-        public void Configure(EntityTypeBuilder<TipoProduccion> builder)
+        public void Configure(EntityTypeBuilder<TipoProteccion> builder)
         {
             builder.ToTable("TipoProteccion");
             builder.HasKey(x => x.Id);
