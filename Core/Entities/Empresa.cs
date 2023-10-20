@@ -12,6 +12,7 @@ namespace Core.Entities
         public string RepresentanteLegal;
         public string FechaCreacion;
         public int IdMun;
+        public Municipio Municipio;
 
     }
 }

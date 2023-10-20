@@ -9,5 +9,9 @@ namespace Core.Entities
     {
         public string Nombre;
         public int IdDep;
+        public Departamento Departamento;
+        public ICollection<Empleado> Empleados;
+        public ICollection<Empresa> Empresas;
+        public ICollection<Cliente> Clientes;
     }
 }

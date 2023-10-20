@@ -8,6 +8,8 @@ namespace Core.Entities
     public class Genero : BaseEntity
     {
         public string Descripcion;
-        
+        public ICollection<Prenda> Prendas;
+
+
     }
 }

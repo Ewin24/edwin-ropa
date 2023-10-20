@@ -9,5 +9,10 @@ namespace Core.Entities
     {
         public string Descripcion;
         public int IdTipoEstado;
+        public TipoEstado TipoEstado;
+
+        public ICollection<Prenda> Prendas;
+        public ICollection<DetalleOrden> DetalleOrdenes;
+        public ICollection<Orden> Ordenes;
     }
 }

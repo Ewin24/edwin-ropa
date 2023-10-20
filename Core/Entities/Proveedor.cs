@@ -10,7 +10,9 @@ namespace Core.Entities
         public string Nombre;
         public string NitProveedor;
         public int IdTipoPersona;
+        public TipoPersona TipoPersona;
         public int IdMunicipio;
-
+        public Municipio Municipio;
+        public ICollection<InsumoProveedor> InsumoProveedores;
     }
 }

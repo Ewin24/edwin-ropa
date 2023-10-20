@@ -9,5 +9,7 @@ namespace Core.Entities
     {
         public string Descripcion;
 
+        public ICollection<Estado> Estados;
+
     }
 }

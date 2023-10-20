@@ -9,7 +9,12 @@ namespace Core.Entities
     {
         public DateTime Fecha;
         public int IdEmpelado;
+        public Empleado Empleado;
         public int IdCliente;
+        public Cliente Cliente;
         public int IdFormaPago;
+        public FormaPago FormaPago;
+
+        public ICollection<DetalleVenta> DetalleVentas;
     }
 }

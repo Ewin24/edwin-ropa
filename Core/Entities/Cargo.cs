@@ -9,5 +9,5 @@ public class Cargo : BaseEntity
     public string Descripcion;
     public float SueldoBase;
 
-
+    public ICollection<Empleado> Empleados { get; set; }
 }

@@ -8,5 +8,6 @@ namespace Core.Entities
     public class FormaPago : BaseEntity
     {
         public string Descripcion;
+        public ICollection<Venta> Ventas;
     }
 }

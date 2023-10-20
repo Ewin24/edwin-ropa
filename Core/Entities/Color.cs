@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class Color: BaseEntity
+    public class Color : BaseEntity
     {
         public string Descripcion;
-        
+        public ICollection<DetalleOrden> DetalleOrdenes;
+
     }
 }

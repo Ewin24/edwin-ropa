@@ -10,6 +10,10 @@ namespace Core.Entities
         public string Nombre;
         public float ValorUnit;
         public int StockMin;
-        public int StrockMax;
+        public int StockMax;
+
+        public ICollection<InsumoProveedor> InsumoProveedores;
+        public ICollection<InsumoPrenda> InsumoPrendas;
+
     }
 }

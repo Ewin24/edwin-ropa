@@ -8,6 +8,7 @@ namespace Core.Entities
     public class TipoPersona : BaseEntity
     {
         public string Nombre;
-
+        public ICollection<Proveedor> Proveedores;
+        public ICollection<Cliente> Clientes;
     }
 }

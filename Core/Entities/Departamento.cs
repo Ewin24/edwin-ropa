@@ -10,5 +10,7 @@ namespace Core.Entities
         public string Nombre;
         public int IdPais;
         public Pais Pais;
+
+        public ICollection<Municipio> Municipios { get; set; }
     }
 }

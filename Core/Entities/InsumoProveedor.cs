@@ -5,8 +5,14 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class InsumoProveedor
+    public class InsumoProveedor : BaseEntity
     {
-        
+        public int IdInsumo;
+        public Insumo Insumo;
+
+        public int IdProveedor;
+
+        public Proveedor Proveedor;
+
     }
 }

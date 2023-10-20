@@ -9,8 +9,12 @@ namespace Core.Entities
     {
         public int CodInv;
         public int IdPrenda;
+        public Prenda Prenda;
         public float ValorVtaUsd;
         public float ValorVtaCop;
+
+        public ICollection<InventarioTalla> InventarioTallas;
+        public ICollection<DetalleVenta> DetalleVentas;
 
     }
 }

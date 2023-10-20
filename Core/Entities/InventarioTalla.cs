@@ -7,6 +7,11 @@ namespace Core.Entities
 {
     public class InventarioTalla : BaseEntity
     {
-        public string Descripcion;
+        public int cantidad;
+
+        public int IdInv;
+        public Inventario Inventario;
+        public int IdTalla;
+        public Talla Talla;
     }
 }

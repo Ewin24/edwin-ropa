@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class TipoProduccion
+    public class TipoProduccion : BaseEntity
     {
-        
+        public string Descripcion;
     }
 }
