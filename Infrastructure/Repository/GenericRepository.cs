@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Core.Entities;
 using Core.Interfaces;
@@ -23,6 +24,16 @@ namespace Infrastructure.Repository
         }
 
         public void AddRange(IEnumerable<T> entities)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<T>> Find(Expression<Func<T, bool>> expression)
         {
             throw new NotImplementedException();
         }
