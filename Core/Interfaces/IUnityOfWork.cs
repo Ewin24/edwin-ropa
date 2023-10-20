@@ -27,10 +27,12 @@ namespace Core.Interfaces
         IEstadoRepository Estado { get; }
         ITipoEstadoRepository TipoEstado { get; }
         ITipoPersonaRepository TipoPersona { get; }
+        IDetalleOrdenRepository DetalleOrden { get; }
         IFormaPagoRepository FormaPago { get; }
         IClienteRepository Cliente { get; }
         IColorRepository Color { get; }
         IOrdenRepository Orden { get; }
+
         Task<int> SaveAsync();
     }
 }

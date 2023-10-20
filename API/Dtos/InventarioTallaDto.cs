@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace API.Dtos
 {
-    public class DetalleVenta
+    public class InventarioTallaDto
     {
-        public int IdVenta;
-        public int Cantidad;
-        public float ValorUnit;
+        public int cantidad;
+
+
     }
 }
