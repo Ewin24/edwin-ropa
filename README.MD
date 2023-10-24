@@ -101,5 +101,3 @@
 - **/TipoPersona**: Usamos esta ruta para gestionar información sobre tipos de personas en nuestra plataforma.
 
 - **/TipoPersona/{id}**: En esta ruta, podemos acceder a información detallada sobre un tipo de persona específico utilizando su ID.
-
-Recuerda que esta documentación es solo un punto de partida. Cada ruta debería tener una descripción más detallada, ejemplos de uso y cualquier información adicional que sea relevante para los desarrolladores que trabajen con esta API. Si tienes alguna pregunta o necesitas más detalles sobre alguna ruta en particular, no dudes en preguntar. ¡Estoy aquí para ayudarte!
