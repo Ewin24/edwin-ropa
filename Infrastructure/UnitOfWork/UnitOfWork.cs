@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.Entities;
 using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Repositories;
@@ -13,15 +14,31 @@ namespace Infrastructure.UnityOfWork;
 public class UnityOfWork : IUnityOfWork, IDisposable
 {
     private readonly RopaContext _context;
-    private CargoRepository _Cargos;
-    private ClienteRepository _Clientes;
+    private CargoRepository _Cargo;
+    private ClienteRepository _Cliente;
     private ColorRepository _Color;
     private DepartamentoRepository _Departamento;
     private DetalleOrdenRepository _DetalleOrden;
     private DetalleVentaRepository _DetalleVenta;
     private EmpleadoRepository _maestrosvssubmodulos;
     private EmpresaRepository _Empresa;
+    private EmpleadoRepository _Empelado;
     private EstadoRepository _Estado;
+    private FormaPagoRepository _FormaPago;
+    private GeneroRepository _Genero;
+    private InsumoRepository _Insumo;
+    private InsumoPrendaRepository _InsumoPrenda;
+    private InventarioRepository _Inventario;
+    private InventarioTallaRepository _InventarioTalla;
+    private TipoPersonaRepository _TipoPersona;
+    private TipoProteccionRepository _TipoProteccion;
+    private MunicipioRepository _Municipio;
+    private OrdenRepository _Orden;
+    private PaisRepository _Pais;
+    private PrendaRepository _Prenda;
+    private ProveedorRepository _Proveedor;
+    private TallaRepository _Talla;
+    private TipoEstadoRepository _TipoEstado;
 
 
     public IEstadoRepository Estado
@@ -39,11 +56,11 @@ public class UnityOfWork : IUnityOfWork, IDisposable
     {
         get
         {
-            if (_Cargos == null)
+            if (_Cargo == null)
             {
-                _Cargos = new CargoRepository(_context);
+                _Cargo = new CargoRepository(_context);
             }
-            return _Cargos;
+            return _Cargo;
         }
     }
 
@@ -51,11 +68,11 @@ public class UnityOfWork : IUnityOfWork, IDisposable
     {
         get
         {
-            if (_Clientes == null)
+            if (_Cliente == null)
             {
-                _Clientes = new ClienteRepository(_context);
+                _Cliente = new ClienteRepository(_context);
             }
-            return _Clientes;
+            return _Cliente;
         }
     }
 
@@ -131,45 +148,235 @@ public class UnityOfWork : IUnityOfWork, IDisposable
         }
     }
 
-    public ICargoRepository Cargo => throw new NotImplementedException();
+    public ICargoRepository Cargo
+    {
+        get
+        {
+            if (_Cargo == null)
+            {
+                _Cargo = new EstadoRepository(_context);
+            }
+            return _Cargo;
+        }
+    }
 
-    public IPaisRepository Pais => throw new NotImplementedException();
+    public IPaisRepository Pais
+    {
+        get
+        {
+            if (_Pais == null)
+            {
+                _Pais = new EstadoRepository(_context);
+            }
+            return _Pais;
+        }
+    }
 
-    public IInsumoRepository Insumo => throw new NotImplementedException();
+    public IInsumoRepository Insumo
+    {
+        get
+        {
+            if (_Insumo == null)
+            {
+                _Insumo = new InsumoRepository(_context);
+            }
+            return _Insumo;
+        }
+    }
 
-    public IInsumoPrendaRepository InsumoPrenda => throw new NotImplementedException();
+    public IInsumoPrendaRepository InsumoPrenda
+    {
+        get
+        {
+            if (_InsumoPrenda == null)
+            {
+                _InsumoPrenda = new InsumoPrendaRepository(_context);
+            }
+            return _InsumoPrenda;
+        }
+    }
 
-    public IInventarioRepository Inventario => throw new NotImplementedException();
+    public IInventarioRepository Inventario
+    {
+        get
+        {
+            if (_Inventario == null)
+            {
+                _Inventario = new InventarioRepository(_context);
+            }
+            return _Inventario;
+        }
+    }
 
-    public IInventarioTallaRepository InventarioTalla => throw new NotImplementedException();
+    public IInventarioTallaRepository InventarioTalla
+    {
+        get
+        {
+            if (_InventarioTalla == null)
+            {
+                _InventarioTalla = new InventarioRepository(_context);
+            }
+            return _InventarioTalla;
+        }
+    }
 
-    public ITallaRepository Talla => throw new NotImplementedException();
+    public ITallaRepository Talla
+    {
+        get
+        {
+            if (_Talla == null)
+            {
+                _Talla = new TallaRepository(_context);
+            }
+            return _Talla;
+        }
+    }
 
-    public IDetalleVentaRepository DetalleVenta => throw new NotImplementedException();
+    public IDetalleVentaRepository DetalleVenta
+    {
+        get
+        {
+            if (_DetalleVenta == null)
+            {
+                _DetalleVenta = new DetalleVentaRepository(_context);
+            }
+            return (IDetalleVentaRepository)_DetalleVenta;
+        }
+    }
 
-    public IPrendaRepository Prenda => throw new NotImplementedException();
+    public IPrendaRepository Prenda
+    {
+        get
+        {
+            if (_Prenda == null)
+            {
+                _Prenda = new PrendaRepository(_context);
+            }
+            return _Prenda;
+        }
+    }
 
-    public IProveedorRepository Proveedor => throw new NotImplementedException();
+    public IProveedorRepository Proveedor
+    {
+        get
+        {
+            if (_Proveedor == null)
+            {
+                _Proveedor = new ProveedorRepository(_context);
+            }
+            return _Proveedor;
+        }
+    }
+
+    public IMunicipioRepository Municipio
+    {
+        get
+        {
+            if (_Municipio == null)
+            {
+                _Municipio = new MunicipioRepository(_context);
+            }
+            return _Municipio;
+        }
+    }
+
+    public IEmpresaRepository Empresa
+    {
+        get
+        {
+            if (_Empresa == null)
+            {
+                _Empresa = new EmpresaRepository(_context);
+            }
+            return _Empresa;
+        }
+    }
+
+    public ITipoProteccionRepository TipoProteccion
+    {
+        get
+        {
+            if (_TipoProteccion == null)
+            {
+                _TipoProteccion = new TipoProteccionRepository(_context);
+            }
+            return _TipoProteccion;
+        }
+    }
+
+    public IGeneroRepository Genero
+    {
+        get
+        {
+            if (_Genero == null)
+            {
+                _Genero = new GeneroRepository(_context);
+            }
+            return _Genero;
+        }
+    }
+
+    public ITipoEstadoRepository TipoEstado
+    {
+        get
+        {
+            if (_TipoEstado == null)
+            {
+                _TipoEstado = new TipoEstadoRepository(_context);
+            }
+            return _TipoEstado;
+        }
+    }
+
+    public ITipoPersonaRepository TipoPersona
+    {
+        get
+        {
+            if (_TipoPersona == null)
+            {
+                _TipoPersona = new TipoPersonaRepository(_context);
+            }
+            return _TipoPersona;
+        }
+    }
+
+    public IFormaPagoRepository FormaPago
+    {
+        get
+        {
+            if (_FormaPago == null)
+            {
+                _FormaPago = new FormaPagoRepository(_context);
+            }
+            return _FormaPago;
+        }
+    }
+
+    public IClienteRepository Cliente
+    {
+        get
+        {
+            if (_Cliente == null)
+            {
+                _Cliente = new ClienteRepository(_context);
+            }
+            return _Cliente;
+        }
+    }
+
+    public IOrdenRepository Orden
+    {
+        get
+        {
+            if (_Orden == null)
+            {
+                _Orden = new OrdenRepository(_context);
+            }
+            return _Orden;
+        }
+    }
 
     public IVentaRepository Venta => throw new NotImplementedException();
-
-    public IMunicipioRepository Municipio => throw new NotImplementedException();
-
-    public IEmpresaRepository Empresa => throw new NotImplementedException();
-
-    public ITipoProteccionRepository TipoProteccion => throw new NotImplementedException();
-
-    public IGeneroRepository Genero => throw new NotImplementedException();
-
-    public ITipoEstadoRepository TipoEstado => throw new NotImplementedException();
-
-    public ITipoPersonaRepository TipoPersona => throw new NotImplementedException();
-
-    public IFormaPagoRepository FormaPago => throw new NotImplementedException();
-
-    public IClienteRepository Cliente => throw new NotImplementedException();
-
-    public IOrdenRepository Orden => throw new NotImplementedException();
 
     public UnityOfWork(RopaContext context)
     {

@@ -15,5 +15,10 @@ namespace Infrastructure.Repository
         {
             _context = context;
         }
+
+        public static implicit operator CargoRepository(EstadoRepository v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

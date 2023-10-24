@@ -15,5 +15,15 @@ namespace Infrastructure.Repository
         {
             _context = context;
         }
+
+        public static implicit operator InsumoPrendaRepository(EstadoRepository v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static implicit operator InsumoPrendaRepository(InsumoRepository v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

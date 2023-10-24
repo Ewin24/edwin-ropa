@@ -16,5 +16,10 @@ namespace Infrastructure.Repositories
         {
             _context = context;
         }
+
+        public static implicit operator PaisRepository(EstadoRepository v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

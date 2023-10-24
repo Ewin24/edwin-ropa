@@ -15,5 +15,15 @@ namespace Infrastructure.Repository
         {
             _context = context;
         }
+
+        public static implicit operator InventarioTallaRepository(EstadoRepository v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static implicit operator InventarioTallaRepository(InventarioRepository v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
